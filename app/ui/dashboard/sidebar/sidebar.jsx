@@ -14,6 +14,7 @@ import {
   MdHelpCenter,
   MdDashboard,
   MdSupervisedUserCircle,
+  MdLogout,
 } from 'react-icons/md';
 
 const menuItems = [
@@ -106,6 +107,10 @@ const SideBar = () => {
           </li>
         ))}
       </ul>
+      <button className={styles.logout}>
+        <MdLogout />
+        Logout
+      </button>
     </div>
   );
 };
