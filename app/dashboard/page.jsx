@@ -6,8 +6,6 @@ import Footer from '../ui/dashboard/footer/footer';
 import RightBar from '../ui/dashboard/rightbar/rightbar';
 import Transactions from '../ui/dashboard/transaction/transaction';
 const DashBoardPage = () => {
-
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.main}>

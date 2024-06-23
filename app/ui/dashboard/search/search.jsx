@@ -5,12 +5,18 @@ import { useDebouncedCallback } from 'use-debounce';
 import { MdSearch } from 'react-icons/md';
 
 const Search = ({ placeholder }) => {
+  //Get the useSearchParams hook read the current URL's query string
   const searchParams = useSearchParams();
+
   const { replace } = useRouter();
   const pathname = usePathname();
 
   const handleSearch = useDebouncedCallback((e) => {
     const params = new URLSearchParams(searchParams);
+
+    //split the uses to different page
+    params.set('page', 1);
+
     if (e.target.value) {
       e.target.value.length > 2 && params.set('q', e.target.value);
     } else {

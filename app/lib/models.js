@@ -72,13 +72,14 @@ const productSchema = new mongoose.Schema(
     size: {
       type: String,
     },
+    cat: {
+      type: String,
+    },
   },
   //CreateAtDate method
   { timestamps: true }
 );
 
-const User = mongoose.models.User || mongoose.model('User', userSchema);
-const Product =
+export const User = mongoose.models.User || mongoose.model('User', userSchema);
+export const Product =
   mongoose.models.Product || mongoose.model('Product', productSchema);
-
-module.exports = { User, Product };
