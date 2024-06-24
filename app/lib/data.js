@@ -13,7 +13,7 @@ export const fetchUsers = async (query, page) => {
     const users = await User.find({ username: { $regex: regex } })
       .limit(ITEM_PER_PAGE)
       .skip(ITEM_PER_PAGE * (page - 1));
-    console.log(users);
+
     return { count, users };
   } catch (error) {
     console.log(error);
@@ -54,7 +54,7 @@ export const fetchSingleProduct = async (id) => {
   try {
     connectToDB();
     const product = await Product.findById(id);
-    console.log(product.cat);
+
     return product;
   } catch (error) {
     console.log(error);

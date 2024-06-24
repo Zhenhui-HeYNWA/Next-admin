@@ -8,7 +8,6 @@ import { deleteProduct } from '@/app/lib/actions';
 
 const ProductsPage = async ({ searchParams }) => {
   const query = searchParams?.q || '';
-  console.log(query);
 
   const page = searchParams?.page || 1;
   const { count, products } = await fetchProducts(query, page);

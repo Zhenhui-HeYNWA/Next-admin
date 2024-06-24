@@ -7,8 +7,7 @@ const SingleProduct = async ({ params }) => {
   const { id } = params;
 
   const product = await fetchSingleProduct(id);
-  console.log(product.cat);
-  console.log(product);
+
   return (
     <div className={styles.container}>
       <div className={styles.infoContainer}>
